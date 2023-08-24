@@ -11,7 +11,7 @@ export const uploadImage = async (request, response) => { // as a call back fn
     
     try {
         const file = await File.create(fileObj); // file ka path aa jae gya isse 
-        response.status(200).json({ path: `https://:${process.env.PORT}/file/${file._id}`});
+        response.status(200).json({ path: `https://backend-4ss4.onrender.com/file/${file._id}`});
     } catch (error) {
         console.error(error.message);
         response.status(500).json({ error: error.message });
